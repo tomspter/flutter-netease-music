@@ -9,10 +9,12 @@ class MyCollectionApi extends Model {
     return ScopedModel.of<MyCollectionApi>(context);
   }
 
+  // 获取已收藏专辑列表
   Future<Result<Map>> getAlbums() {
     return neteaseRepository!.doRequest('/album/sublist');
   }
 
+  // 获取已收藏歌手列表
   Future<Result<Map>> getArtists() {
     return neteaseRepository!.doRequest('/artist/sublist');
   }

@@ -148,8 +148,9 @@ class QuietModel extends Model {
 class Quiet extends StatefulWidget {
   const Quiet({required this.child, Key? key, this.box}) : super(key: key);
 
+  // 子组件
   final Widget child;
-
+  // 独立Hive存储Box
   final Box<Map>? box;
 
   @override
@@ -164,6 +165,7 @@ class _QuietState extends State<Quiet> {
   @override
   void initState() {
     super.initState();
+    // 初始化播放器和歌词模块
     _quiet = QuietModel(widget.box);
     _playingLyric = PlayingLyric(_quiet.player);
   }

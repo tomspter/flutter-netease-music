@@ -26,7 +26,7 @@ class SettingPage extends StatelessWidget {
                 onTap: () =>
                     context.secondaryNavigator!.pushNamed(pageSettingTheme),
               ),
-              _CopyRightCheckBox(),
+              // _CopyRightCheckBox(),
             ],
           ),
           SettingGroup(
@@ -55,15 +55,15 @@ class SettingPage extends StatelessWidget {
   }
 }
 
-class _CopyRightCheckBox extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return CheckboxListTile(
-      value: Settings.of(context).showCopyrightOverlay,
-      onChanged: (value) {
-        Settings.of(context).showCopyrightOverlay = value!;
-      },
-      title: const Text('隐藏版权浮层'),
-    );
-  }
-}
+// class _CopyRightCheckBox extends StatelessWidget {
+//   @override
+//   Widget build(BuildContext context) {
+//     return CheckboxListTile(
+//       value: Settings.of(context).showCopyrightOverlay,
+//       onChanged: (value) {
+//         Settings.of(context).showCopyrightOverlay = value!;
+//       },
+//       title: const Text('隐藏版权浮层'),
+//     );
+//   }
+// }

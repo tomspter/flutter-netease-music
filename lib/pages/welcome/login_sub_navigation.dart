@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import 'page_login_password.dart';
 import 'page_login_phone.dart';
 
 const pageLoginPhone = "loginWithPhone";
@@ -29,15 +27,16 @@ class LoginNavigator extends StatelessWidget {
   }
 
   Widget? _generatePage(RouteSettings settings) {
-    switch (settings.name) {
-      case pageLoginPhone:
-        return PageLoginWithPhone();
-      case pageLoginPassword:
-        final args = settings.arguments! as Map<String, Object>;
-        return PageLoginPassword(
-          phone: args['phone'] as String?,
-        );
-    }
-    return null;
+    // switch (settings.name) {
+    //   case pageLoginPhone:
+    //     return PageLoginWithPhone();
+    //   case pageLoginPassword:
+    //     final args = settings.arguments! as Map<String, Object>;
+    //     return PageLoginPassword(
+    //       phone: args['phone'] as String?,
+    //     );
+    // }
+    // return null;
+    return PageLoginWithPhone();
   }
 }

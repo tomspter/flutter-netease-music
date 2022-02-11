@@ -17,7 +17,6 @@ import 'package:quiet/pages/search/page_search.dart';
 import 'package:quiet/pages/setting/page_setting.dart';
 import 'package:quiet/pages/video/page_music_video_player.dart';
 import 'package:quiet/pages/welcome/login_sub_navigation.dart';
-import 'package:quiet/pages/welcome/page_welcome.dart';
 
 export 'package:quiet/pages/collection/page_collections.dart';
 export 'package:quiet/pages/leaderboard/page_leaderboard.dart';
@@ -77,7 +76,6 @@ final Map<String, WidgetBuilder> routes = {
   pageMyCollection: (context) => MyCollectionPage(),
   pageSetting: (context) => SettingPage(),
   pageSettingTheme: (context) => SettingThemePage(),
-  pageWelcome: (context) => PageWelcome(),
   pageFmPlaying: (context) => PagePlayingFm(),
 };
 

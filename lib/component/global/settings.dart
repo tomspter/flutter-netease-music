@@ -26,8 +26,8 @@ class Settings extends Model {
         _preferences.getInt(_keyThemeMode) ?? 0]; /* default is system */
     _theme = quietThemes[
         _preferences.getInt(_keyTheme) ?? 0]; /* default is NetEase Red */
-    _showCopyrightOverlay = _preferences.get(_keyCopyright) as bool?;
-    _skipWelcomePage = _preferences.get(_keySkipWelcomePage) as bool? ?? false;
+    // _showCopyrightOverlay = _preferences.get(_keyCopyright) as bool?;
+    // _skipWelcomePage = _preferences.get(_keySkipWelcomePage) as bool? ?? false;
   }
 
   ///获取全局设置的实例
@@ -60,23 +60,23 @@ class Settings extends Model {
     notifyListeners();
   }
 
-  bool? _showCopyrightOverlay;
+  // bool? _showCopyrightOverlay;
+  //
+  // bool get showCopyrightOverlay => _showCopyrightOverlay ?? true;
+  //
+  // set showCopyrightOverlay(bool show) {
+  //   _showCopyrightOverlay = show;
+  //   _preferences.setBool(_keyCopyright, show);
+  //   notifyListeners();
+  // }
 
-  bool get showCopyrightOverlay => _showCopyrightOverlay ?? true;
-
-  set showCopyrightOverlay(bool show) {
-    _showCopyrightOverlay = show;
-    _preferences.setBool(_keyCopyright, show);
-    notifyListeners();
-  }
-
-  bool? _skipWelcomePage;
-
-  bool get skipWelcomePage => _skipWelcomePage ?? false;
-
-  void setSkipWelcomePage() {
-    _skipWelcomePage = true;
-    _preferences.setBool(_keySkipWelcomePage, true);
-    notifyListeners();
-  }
+  // bool? _skipWelcomePage;
+  //
+  // bool get skipWelcomePage => _skipWelcomePage ?? false;
+  //
+  // void setSkipWelcomePage() {
+  //   _skipWelcomePage = true;
+  //   _preferences.setBool(_keySkipWelcomePage, true);
+  //   notifyListeners();
+  // }
 }
