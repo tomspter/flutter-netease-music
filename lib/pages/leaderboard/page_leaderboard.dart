@@ -159,14 +159,14 @@ class _ItemLeaderboard1 extends StatelessWidget {
             AspectRatio(
               aspectRatio: 1,
               child: ClipRRect(
-                borderRadius: BorderRadius.circular(3),
+                borderRadius: BorderRadius.circular(6),
                 child: Stack(
                   children: <Widget>[
                     Image(image: CachedImage(row["coverImgUrl"])),
                     Align(
                       alignment: Alignment.bottomCenter,
                       child: Container(
-                        height: 24,
+                        height: 26,
                         width: double.infinity,
                         decoration: const BoxDecoration(
                             gradient: LinearGradient(
@@ -174,13 +174,13 @@ class _ItemLeaderboard1 extends StatelessWidget {
                                 end: Alignment.bottomCenter,
                                 colors: [Colors.transparent, Colors.black45])),
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
                           children: <Widget>[
-                            const Spacer(),
                             Text(
                               row["updateFrequency"],
                               style: Theme.of(context).primaryTextTheme.caption,
                             ),
-                            const Padding(padding: EdgeInsets.only(right: 4))
+                            const Padding(padding: EdgeInsets.only(right: 6))
                           ],
                         ),
                       ),
@@ -189,7 +189,7 @@ class _ItemLeaderboard1 extends StatelessWidget {
                 ),
               ),
             ),
-            const Padding(padding: EdgeInsets.only(left: 8)),
+            const Padding(padding: EdgeInsets.only(left: 18)),
             Expanded(
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
@@ -213,7 +213,7 @@ class _ItemLeaderboard1 extends StatelessWidget {
                     overflow: TextOverflow.ellipsis,
                   ),
                   const Spacer(),
-                  const Divider(height: 0),
+                  // const Divider(height: 5,color: Colors.black,),
                 ],
               ),
             )
@@ -224,6 +224,7 @@ class _ItemLeaderboard1 extends StatelessWidget {
   }
 
   String _getTrack(Map map) {
+    print(map);
     return "${map["first"]} - ${map["second"]}";
   }
 }
