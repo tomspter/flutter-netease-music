@@ -3,14 +3,6 @@ import 'page_login_phone.dart';
 
 const pageLoginPhone = "loginWithPhone";
 
-///
-/// 需要的参数:
-/// phone : 手机号
-///
-const pageLoginPassword = "loginPassword";
-
-const pageRegister = "register";
-
 ///登录子流程
 class LoginNavigator extends StatelessWidget {
   const LoginNavigator({Key? key}) : super(key: key);
@@ -27,16 +19,6 @@ class LoginNavigator extends StatelessWidget {
   }
 
   Widget? _generatePage(RouteSettings settings) {
-    // switch (settings.name) {
-    //   case pageLoginPhone:
-    //     return PageLoginWithPhone();
-    //   case pageLoginPassword:
-    //     final args = settings.arguments! as Map<String, Object>;
-    //     return PageLoginPassword(
-    //       phone: args['phone'] as String?,
-    //     );
-    // }
-    // return null;
     return PageLoginWithPhone();
   }
 }

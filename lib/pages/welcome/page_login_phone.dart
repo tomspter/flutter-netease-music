@@ -12,7 +12,6 @@ import 'package:quiet/model/region_flag.dart';
 import 'package:quiet/part/part.dart';
 import 'package:quiet/repository.dart';
 
-import 'login_sub_navigation.dart';
 import 'page_dia_code_selection.dart';
 
 /// Read emoji flags from assets.
