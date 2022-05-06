@@ -32,7 +32,7 @@ class MessageLookup extends MessageLookupByLibrary {
         "albumShareContent": m0,
         "alreadyBuy": MessageLookupByLibrary.simpleMessage("收藏和赞"),
         "cloudMusic": MessageLookupByLibrary.simpleMessage("云盘"),
-        "collectionLike": MessageLookupByLibrary.simpleMessage("已购"),
+        "collectionLike": MessageLookupByLibrary.simpleMessage("收藏"),
         "copyRightOverlay":
             MessageLookupByLibrary.simpleMessage("只用作个人学习研究，禁止用于商业及非法用途"),
         "createdSongList": MessageLookupByLibrary.simpleMessage("创建歌单"),

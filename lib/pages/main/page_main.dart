@@ -18,7 +18,9 @@ part 'page_main_portrait.dart';
 class MainPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return context.isLandscape ? _LandscapeMainPage() : _PortraitMainPage();
+    // 根据屏幕方向进入不同主页 _PortraitMainPage 竖屏
+    // return context.isLandscape ? _LandscapeMainPage() : _PortraitMainPage();
+    return _PortraitMainPage();
   }
 }
 
