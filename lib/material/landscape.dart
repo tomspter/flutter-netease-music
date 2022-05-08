@@ -14,11 +14,12 @@ class LandscapeWidgetSwitcher extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (context.isLandscape) {
-      return landscape == null ? const SizedBox() : landscape!(context);
-    } else {
-      return portrait == null ? const SizedBox() : portrait!(context);
-    }
+    // if (context.isLandscape) {
+    //   return landscape == null ? const SizedBox() : landscape!(context);
+    // } else {
+    //   return portrait == null ? const SizedBox() : portrait!(context);
+    // }
+    return portrait == null ? const SizedBox() : portrait!(context);
   }
 }
 

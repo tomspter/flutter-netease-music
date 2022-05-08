@@ -483,7 +483,7 @@ class _PlaylistDetailHeader extends StatelessWidget {
       background: PlayListHeaderBackground(imageUrl: playlist.coverUrl),
       content: _PlayListHeaderContent(playlist: playlist),
       builder: (context, t) => AppBar(
-        leading: context.isLandscape ? null : const BackButton(),
+        leading: const BackButton(),
         automaticallyImplyLeading: false,
         title: Text(t > 0.5
             ? playlist.name ?? context.strings.playlist

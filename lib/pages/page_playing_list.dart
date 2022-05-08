@@ -74,11 +74,12 @@ class _PlayingListContainer extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (context.isLandscape) {
-      return _LandscapePlayingListContainer(child: child);
-    } else {
-      return _PortraitPlayingListContainer(child: child);
-    }
+    // if (context.isLandscape) {
+    //   return _LandscapePlayingListContainer(child: child);
+    // } else {
+    //   return _PortraitPlayingListContainer(child: child);
+    // }
+    return _PortraitPlayingListContainer(child: child);
   }
 }
 

@@ -27,9 +27,9 @@ class PlayingPage extends StatelessWidget {
       });
       return Container();
     }
-    if (context.isLandscape) {
-      return LandscapePlayingPage();
-    }
+    // if (context.isLandscape) {
+    //   return LandscapePlayingPage();
+    // }
     return Scaffold(
       resizeToAvoidBottomInset: false,
       body: Stack(

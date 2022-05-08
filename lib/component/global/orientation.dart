@@ -4,20 +4,22 @@ import 'package:quiet/pages/main/page_main.dart';
 extension OrientationContext on BuildContext {
   NavigatorState get rootNavigator => Navigator.of(this, rootNavigator: true);
 
-  NavigatorState? get primaryNavigator =>
-      isLandscape ? landscapePrimaryNavigator : Navigator.of(this);
-
-  NavigatorState? get secondaryNavigator =>
-      isLandscape ? landscapeSecondaryNavigator : Navigator.of(this);
+  NavigatorState? get primaryNavigator =>Navigator.of(this);
+  NavigatorState? get secondaryNavigator =>Navigator.of(this);
+  // NavigatorState? get primaryNavigator =>
+  //     isLandscape ? landscapePrimaryNavigator : Navigator.of(this);
+  //
+  // NavigatorState? get secondaryNavigator =>
+  //     isLandscape ? landscapeSecondaryNavigator : Navigator.of(this);
 
   ///
   /// check current application orientation is landscape.
   ///
-  bool get isLandscape => MediaQuery.of(this).isLandscape;
+  // bool get isLandscape => MediaQuery.of(this).isLandscape;
 
-  bool get isPortrait => !isLandscape;
+  // bool get isPortrait => !isLandscape;
 }
 
 extension _MediaData on MediaQueryData {
-  bool get isLandscape => orientation == Orientation.landscape;
+  // bool get isLandscape => orientation == Orientation.landscape;
 }

@@ -12,7 +12,7 @@ import 'package:quiet/part/part.dart';
 import 'drawer.dart';
 import 'my/main_page_my.dart';
 
-part 'page_main_landscape.dart';
+// part 'page_main_landscape.dart';
 part 'page_main_portrait.dart';
 
 class MainPage extends StatelessWidget {
@@ -24,16 +24,16 @@ class MainPage extends StatelessWidget {
   }
 }
 
-extension LandscapeMainContext on BuildContext {
-  /// Obtain the primary navigator for landscape mode.
-  NavigatorState? get landscapePrimaryNavigator =>
-      findAncestorStateOfType<_LandscapeMainPageState>()!
-          ._landscapeNavigatorKey
-          .currentState;
-
-  /// Obtain the secondary navigator for landscape mode.
-  NavigatorState? get landscapeSecondaryNavigator {
-    final key = read<LandscapeSecondaryKey>();
-    return key.currentState;
-  }
-}
+// extension LandscapeMainContext on BuildContext {
+//   /// Obtain the primary navigator for landscape mode.
+//   NavigatorState? get landscapePrimaryNavigator =>
+//       findAncestorStateOfType<_LandscapeMainPageState>()!
+//           ._landscapeNavigatorKey
+//           .currentState;
+//
+//   /// Obtain the secondary navigator for landscape mode.
+//   NavigatorState? get landscapeSecondaryNavigator {
+//     final key = read<LandscapeSecondaryKey>();
+//     return key.currentState;
+//   }
+// }

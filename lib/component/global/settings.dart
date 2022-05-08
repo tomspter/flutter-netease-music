@@ -10,9 +10,9 @@ const String _keyTheme = '$_prefix:theme';
 
 const String _keyThemeMode = '$_prefix:themeMode';
 
-const String _keyCopyright = '$_prefix:copyright';
-
-const String _keySkipWelcomePage = '$_prefix:skipWelcomePage';
+// const String _keyCopyright = '$_prefix:copyright';
+//
+// const String _keySkipWelcomePage = '$_prefix:skipWelcomePage';
 
 extension SettingsProvider on BuildContext {
   Settings get settings => ScopedModel.of(this, rebuildOnChange: true);

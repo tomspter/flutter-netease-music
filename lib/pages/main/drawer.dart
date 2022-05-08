@@ -24,21 +24,13 @@ class MainNavigationDrawer extends StatelessWidget {
                   style: ListTileStyle.drawer,
                   child: ListView(
                     children: <Widget>[
-                      MainNavigationDrawerTile(
-                        icon: const Icon(Icons.settings),
+                      ListTile(
+                        leading: const Icon(Icons.settings),
                         title: const Text("设置"),
                         onTap: () {
                           Navigator.pushNamed(context, pageSetting);
                         },
-                      ),
-                      const Divider(height: 0, indent: 16),
-                      MainNavigationDrawerTile(
-                        icon: const Icon(Icons.format_quote),
-                        title: const Text("Star On GitHub"),
-                        onTap: () {
-                          launch(
-                              "https://github.com/boyan01/flutter-netease-music");
-                        },
+                        selected: false,
                       ),
                     ],
                   ),
@@ -51,63 +43,32 @@ class MainNavigationDrawer extends StatelessWidget {
 }
 
 // The tile item for main draw. auto fit landscape and portrait.
-class MainNavigationDrawerTile extends StatelessWidget {
-  const MainNavigationDrawerTile({
-    Key? key,
-    required this.icon,
-    required this.title,
-    required this.onTap,
-    this.selected = false,
-  }) : super(key: key);
-
-  final Widget icon;
-  final Widget title;
-
-  final VoidCallback onTap;
-
-  final bool selected;
-
-  @override
-  Widget build(BuildContext context) {
-    if (context.isLandscape) {
-      final background =
-          selected ? Theme.of(context).primaryColor : Colors.transparent;
-      final foreground = selected
-          ? Theme.of(context).primaryIconTheme.color
-          : Theme.of(context).iconTheme.color;
-      return Material(
-        color: background,
-        child: InkWell(
-          onTap: onTap,
-          child: Padding(
-            padding: const EdgeInsets.symmetric(vertical: 10),
-            child: Column(
-              mainAxisSize: MainAxisSize.min,
-              children: <Widget>[
-                IconTheme(
-                  data: IconThemeData(size: 32, color: foreground),
-                  child: icon,
-                ),
-                const SizedBox(height: 8),
-                DefaultTextStyle(
-                  style: context.textTheme.caption!.copyWith(color: foreground),
-                  child: title,
-                ),
-              ],
-            ),
-          ),
-        ),
-      );
-    } else {
-      return ListTile(
-        leading: icon,
-        title: title,
-        onTap: onTap,
-        selected: selected,
-      );
-    }
-  }
-}
+// class MainNavigationDrawerTile extends StatelessWidget {
+//   const MainNavigationDrawerTile({
+//     Key? key,
+//     required this.icon,
+//     required this.title,
+//     required this.onTap,
+//     this.selected = false,
+//   }) : super(key: key);
+//
+//   final Widget icon;
+//   final Widget title;
+//
+//   final VoidCallback onTap;
+//
+//   final bool selected;
+//
+//   @override
+//   Widget build(BuildContext context) {
+//     return ListTile(
+//       leading: icon,
+//       title: title,
+//       onTap: onTap,
+//       selected: selected,
+//     );
+//   }
+// }
 
 ///the header of drawer
 class UserInfo extends ConsumerWidget {

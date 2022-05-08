@@ -10,10 +10,10 @@ class QuietHero extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    if (context.isLandscape) {
-      // disable hero animation in landscape mode
-      return child;
-    }
+    // if (context.isLandscape) {
+    //   // disable hero animation in landscape mode
+    //   return child;
+    // }
     return Hero(tag: tag, child: child);
   }
 }

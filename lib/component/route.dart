@@ -157,12 +157,12 @@ const _landscapePrimaryRoutes = {
 
 extension RouterContext on BuildContext {
   Future<T?> push<T>(String name, {dynamic arguments}) async {
-    if (!isLandscape || _landscapeTopRoutes.contains(name)) {
+    if (_landscapeTopRoutes.contains(name)) {
       return Navigator.of(this).pushNamed<T>(name, arguments: arguments);
     }
-    if (_landscapePrimaryRoutes.contains(name)) {
-      return landscapePrimaryNavigator!.pushNamed(name, arguments: arguments);
-    }
-    return landscapeSecondaryNavigator!.pushNamed(name, arguments: arguments);
+    // if (_landscapePrimaryRoutes.contains(name)) {
+    //   return landscapePrimaryNavigator!.pushNamed(name, arguments: arguments);
+    // }
+    // return landscapeSecondaryNavigator!.pushNamed(name, arguments: arguments);
   }
 }

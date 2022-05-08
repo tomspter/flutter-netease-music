@@ -30,20 +30,13 @@ dependencies:
   sembast: ^3.1.0+2
   scoped_model: ^2.0.0-nullsafety.0
   loader:
-    git:
-      url: https://github.com/boyan01/loader.git
-      ref: e1ef2d9957bc8615c7f19f989d4fcfc142e20e93
+    path: loader
   encrypt: ^5.0.0
   netease_music_api:
-    #    path: ../NeteaseCloudMusicApi
-    git:
-      url: https://github.com/boyan01/NeteaseCloudMusicApi.git
-      ref: e007ba78565d9094959d9e50336ea734fc8d4f64
+    path: netease_music_api
   overlay_support: ^1.2.1
   music_player:
-    git:
-      url: https://github.com/boyan01/flutter-music-player.git
-      ref: 7ba0513153853f769e3789b37f9ef630c85740f6
+    path: music_player
   provider: ^5.0.0
   scrollable_positioned_list: ^0.2.0-nullsafety.0
   hive: ^2.0.4
